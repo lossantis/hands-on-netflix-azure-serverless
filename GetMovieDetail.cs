@@ -6,12 +6,12 @@ using Microsoft.Azure.Cosmos;
 
 namespace HandsOnNetflixAzureServerless
 {
-    public class FnGetMovieDetail
+    public class GetMovieDetail
     {
-        private readonly ILogger<FnGetMovieDetail> _logger;
+        private readonly ILogger<GetMovieDetail> _logger;
         private readonly CosmosClient _cosmosClient;
 
-        public FnGetMovieDetail(ILogger<FnGetMovieDetail> logger, CosmosClient cosmosClient)
+        public GetMovieDetail(ILogger<GetMovieDetail> logger, CosmosClient cosmosClient)
         {
             _logger = logger;
             _cosmosClient = cosmosClient;

@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 
 namespace HandsOnNetflixAzureServerless
 {
-    public class FnPostDatabase
+    public class SaveMovie
     {
-        private readonly ILogger<FnPostDatabase> _logger;
+        private readonly ILogger<SaveMovie> _logger;
 
-        public FnPostDatabase(ILogger<FnPostDatabase> logger)
+        public SaveMovie(ILogger<SaveMovie> logger)
         {
             _logger = logger;
         }

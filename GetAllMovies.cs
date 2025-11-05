@@ -8,12 +8,12 @@ using System.Net;
 
 namespace HandsOnNetflixAzureServerless
 {
-    public class FnGetAllMovies
+    public class GetAllMovies
     {
-        private readonly ILogger<FnGetAllMovies> _logger;
+        private readonly ILogger<GetAllMovies> _logger;
         private readonly CosmosClient _cosmosClient;
 
-        public FnGetAllMovies(ILogger<FnGetAllMovies> logger, CosmosClient cosmosClient)
+        public GetAllMovies(ILogger<GetAllMovies> logger, CosmosClient cosmosClient)
         {
             _logger = logger;
             _cosmosClient = cosmosClient;
