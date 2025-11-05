@@ -5,18 +5,18 @@ using Newtonsoft.Json;
 
 namespace HandsOnNetflixAzureServerless
 {
-    public class fnPostDatabase
+    public class FnPostDatabase
     {
-        private readonly ILogger<fnPostDatabase> _logger;
+        private readonly ILogger<FnPostDatabase> _logger;
 
-        public fnPostDatabase(ILogger<fnPostDatabase> logger)
+        public FnPostDatabase(ILogger<FnPostDatabase> logger)
         {
             _logger = logger;
         }
 
-        [Function("movie")]
+        [Function("SaveMovie")]
         [CosmosDBOutput("%CosmosDBDatabaseName%", "Movies", Connection = "CosmosDBConnectionString")]
-        public async Task<object?> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestData req)
+        public async Task<object?> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = "movies")] HttpRequestData req)
         {
             _logger.LogInformation("Saving movie...");
 

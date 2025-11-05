@@ -10,7 +10,7 @@ This project demonstrates a cloud-native serverless architecture using Azure Fun
 
 ```
 HandsOnNetflixAzureServerless/
-├── fnPostDataStorage.cs           # HTTP-triggered Azure Function for file uploads
+├── FnPostDataStorage.cs           # HTTP-triggered Azure Function for file uploads
 ├── Program.cs                     # Application entry point and configuration
 ├── HandsOnNetflixAzureServerless.csproj  # Project file with dependencies
 ├── HandsOnNetflixAzureServerless.sln     # Solution file
@@ -27,7 +27,7 @@ HandsOnNetflixAzureServerless/
 
 ## 🚀 Core Features
 
-### Data Storage Function (`fnPostDataStorage`)
+### Data Storage Function (`FnPostDataStorage`)
 
 - **Endpoint**: HTTP POST `/api/dataStorage`
 - **Authorization**: Function-level authorization required

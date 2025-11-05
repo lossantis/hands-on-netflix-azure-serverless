@@ -9,17 +9,17 @@ using Azure.Storage.Blobs.Models;
 
 namespace HandsOnNetflixAzureServerless;
 
-public class fnPostDataStorage
+public class FnPostDataStorage
 {
-    private readonly ILogger<fnPostDataStorage> _logger;
+    private readonly ILogger<FnPostDataStorage> _logger;
 
-    public fnPostDataStorage(ILogger<fnPostDataStorage> logger)
+    public FnPostDataStorage(ILogger<FnPostDataStorage> logger)
     {
         _logger = logger;
     }
 
-    [Function("dataStorage")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+    [Function("SaveDataStorage")]
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = "dataStorage")] HttpRequest req)
     {
         _logger.LogInformation("Processing request image...");
 
